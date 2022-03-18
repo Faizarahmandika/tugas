@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset="utf-8">
+     <title>Menu</title>
+     <link rel="stylesheet" href="berandausaha.css">
+ </head>
+
+ <body>
+     <div class="kop">
+	 <marquee direction="right" height="100px">
+		<p>SELAMAT DATANG DI ANGKRINGAN MANG UCOK</p>
+     </marquee>
+	
+	 </div>
+     <div class="header">		
+		 <div class="header-logo">
+			 <img src="https://drive.google.com/uc?export=view&id=1ixyiLYGsgo_Ii58dw0sE9Ykmh5XJNyLi" ></div>				 
+         <div class="header-logo2">
+			 <img src="https://drive.google.com/uc?export=view&id=1ixyiLYGsgo_Ii58dw0sE9Ykmh5XJNyLi" ></div>
+         <div class="header-list">
+			 <ul> 
+				  <li><a href="indexberanda.html">  Beranda </li></a>
+				  <li><a href="indexproduk.html">  Produk </li></a>
+				  <li><a href="indexkontak.html">  Kontak </li></a>
+				  <li><a href="indexpesan.html">  Pesan </li></a>
+			 </ul>
+         </div>
+     </div>
+	 
+<div class="contents33">	 
+		<h1>SILAHKAN KETIK NAMA BARANG DAN NOMINAL HARGA BARANG</h1> 
+</div>
+
+<div class="contact-form">
+<center>
+						<table border="0">
+							<tr>
+								<th colspan="2" bgcolor="red">PERHITUNGAN BELANJA</th>
+							</tr>
+							<tr>
+								<th colspan="2" bgcolor="yellow">EPAN STUDIO</th>
+							</tr>
+							<tr>
+								<td align="center">NAMA BARANG</td>
+								<td align="center"><input type="text" id="ipt_namabarang"></td>
+							</tr>
+							<tr>
+								<td align="center">HARGA BARANG</td>
+								<td align="center"><input type="text" id="ipt_hargabarang"></td>
+							</tr>
+							<tr>
+								<td align="center">JUMLAH BARANG</td>
+								<td align="center"><input type="text" id="ipt_jumlahbarang"></td>
+							</tr>
+							<tr>
+								<td align="center">DISKON</td>
+								<td align="center"><input type="text" id="ipt_diskon"></td>
+							</tr>
+							<tr>
+								<td align="center" colspan="2"><button onclick="hitung()"=>HITUNG</button> </td>
+							</tr>
+							<tr>
+								<td align="center" colspan="2">
+									<p>AYO BELANJA</p>
+									<p>EPAN STUDIO</p>
+								</td>
+							</tr>
+							<tr>
+								<td align="center">NAMA BARANG</td>
+								<td align="center"><input type="text" id="opt_namabarang" disabled></td>
+							</tr>
+							<tr>
+								<td align="center">HARGA BARANG</td>
+								<td align="center"><input type="text" id="opt_hargabarang" disabled></td>
+							</tr>
+							<tr>
+								<td align="center">JUMLAH BARANG</td>
+								<td align="center"><input type="text" id="opt_jumlahbarang" disabled></td>
+							</tr>
+							<tr>
+								<td align="center">DISKON</td>
+								<td align="center"><input type="text" id="opt_diskon" disabled></td>
+							</tr>
+							<tr>
+								<td align="center">TOTAL HARGA</td>
+								<td align="center"><input type="text" id="opt_totalharga" disabled></td>
+							</tr>
+							<tr>
+								<td align="center" colspan="2"><button onclick="reset()"=>RESET</button></td>
+							</tr>
+						</table>
+						<script>
+							var namabarang;
+							var hargabarang;
+							var jumlahbarang;
+							var diskon;
+							var totalharga;
+							function hitung() {
+								namabarang = document.getElementById("ipt_namabarang").value;
+								hargabarang = parseFloat(document.getElementById("ipt_hargabarang").value);
+								jumlahbarang = parseFloat(document.getElementById("ipt_jumlahbarang").value);
+								diskon = parseFloat(document.getElementById("ipt_diskon").value);
+								totalharga = (hargabarang * jumlahbarang) - (hargabarang * jumlahbarang * diskon/100);
+								document.getElementById("opt_namabarang").value = namabarang;
+								document.getElementById("opt_hargabarang").value = hargabarang;
+								document.getElementById("opt_jumlahbarang").value = jumlahbarang;
+								document.getElementById("opt_diskon").value = diskon;
+								document.getElementById("opt_totalharga").value = totalharga;
+							}
+							function reset(){
+								document.getElementById("ipt_namabarang").value = "";
+								document.getElementById("ipt_hargabarang").value = "";
+								document.getElementById("ipt_jumlahbarang").value = "";
+								document.getElementById("ipt_diskon").value ="";
+								document.getElementById("opt_namabarang").value = "";
+								document.getElementById("opt_hargabarang").value = "";
+								document.getElementById("opt_jumlahbarang").value = "";
+								document.getElementById("opt_diskon").value ="";
+								document.getElementById("opt_totalharga").value = "";
+                            }
+						</script>
+</center>
+					</div>
+					
+		 </div>
+    <div class="footer">
+		  <div class="footer-logo">FR</div>
+		  <div class="footer-list">
+				<ul>
+				  <li>Angkringan Mang Ucok</li>
+				  <li>Makan, Minum dan Bersantai</li>				  
+				</ul>				
+		  </div>
+		  <div class="footer-list2">
+				<p> copyright@faizarahmand </p>
+		  </div>
+     </div>
+    </body>
+</html>
